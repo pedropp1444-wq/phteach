@@ -1,0 +1,25 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+#
+# Initial commit
+#
+# Changes to be committed:
+#	new file:   cases.html
+#	new file:   contato.html
+#	new file:   index.html
+#	new file:   "servi\303\247os.html"
+#	new file:   sobre.html
+#	new file:   style.css
+#
+# Changes not staged for commit:
+#	deleted:    "servi\303\247os.html"
+#	modified:   style.css
+#
+# Untracked files:
+#	Untitled-1.ipynb
+#	"servi\303\247o.html"
+#	"servi\303\247o2.html"
+#

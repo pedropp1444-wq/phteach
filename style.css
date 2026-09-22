@@ -1,15 +1,29 @@
+/* ========================================
+   PH TEACH - STYLE.CSS
+   Site institucional - HTML5 + CSS3
+   Responsivo: Mobile First
+======================================== */
+
+/* ===== RESET ===== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #f8fafc;
     color: #0f172a;
     line-height: 1.6;
 }
+
+/* ===== ELEMENTOS GERAIS ===== */
 
 a {
     text-decoration: none;
@@ -19,18 +33,30 @@ ul {
     list-style: none;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
-/* MENU */
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+/* ===== HEADER ===== */
 
 header {
-    background-color: white;
+    background-color: #ffffff;
     border-bottom: 1px solid #e2e8f0;
+    width: 100%;
 }
 
 nav {
     width: 90%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     padding: 20px 0;
 
     display: flex;
@@ -39,33 +65,49 @@ nav {
     gap: 20px;
 }
 
+/* ===== LOGO ===== */
+
 .logo {
     color: #2563eb;
     font-size: 26px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
+.logo:hover {
+    color: #1d4ed8;
+}
+
+/* ===== MENU ===== */
+
 .menu {
+    width: 100%;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+
+    gap: 12px 18px;
 }
 
 .menu a {
     color: #475569;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px;
+    transition: 0.3s;
 }
 
 .menu a:hover {
     color: #2563eb;
 }
 
-
-/* PRINCIPAL */
+/* ===== HERO ===== */
 
 .hero {
-    min-height: 70vh;
-    padding: 80px 5%;
+    min-height: 65vh;
+    padding: 70px 5%;
 
     display: flex;
     align-items: center;
@@ -79,19 +121,21 @@ nav {
 }
 
 .hero-content {
-    max-width: 800px;
+    width: 100%;
+    max-width: 850px;
     text-align: center;
 }
 
 .tagline {
     color: #2563eb;
+    font-size: 14px;
     font-weight: bold;
     letter-spacing: 2px;
     margin-bottom: 15px;
 }
 
 .hero h1 {
-    font-size: 42px;
+    font-size: 36px;
     line-height: 1.2;
     margin-bottom: 20px;
 }
@@ -102,32 +146,40 @@ nav {
 
 .hero-content > p:not(.tagline) {
     color: #475569;
-    font-size: 18px;
+    font-size: 17px;
     margin-bottom: 30px;
 }
 
-
-/* BOTÕES */
+/* ===== BOTÕES DO HERO ===== */
 
 .hero-buttons {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    align-items: stretch;
+    gap: 12px;
 }
 
 .btn {
+    display: inline-block;
+
     background-color: #2563eb;
-    color: white;
+    color: #ffffff;
 
     padding: 14px 24px;
     border-radius: 8px;
 
     font-weight: bold;
+    text-align: center;
+
+    border: 2px solid #2563eb;
+
+    transition: 0.3s;
 }
 
 .btn:hover {
     background-color: #1d4ed8;
+    border-color: #1d4ed8;
+    transform: translateY(-2px);
 }
 
 .btn-outline {
@@ -138,32 +190,36 @@ nav {
 
 .btn-outline:hover {
     background-color: #2563eb;
-    color: white;
+    color: #ffffff;
 }
 
-
-/* CARDS */
+/* ===== SEÇÕES ===== */
 
 .destaques {
     width: 90%;
     max-width: 1200px;
-    margin: auto;
-    padding: 70px 0;
+    margin: 0 auto;
+    padding: 60px 0;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .section-title h2 {
-    font-size: 32px;
+    font-size: 28px;
+    line-height: 1.2;
     margin-bottom: 15px;
 }
 
 .section-title > p:last-child {
     color: #475569;
+    max-width: 750px;
+    margin: 0 auto;
 }
+
+/* ===== CARDS ===== */
 
 .cards {
     display: grid;
@@ -172,8 +228,124 @@ nav {
 }
 
 .card {
-    background-color: white;
-    padding: 30px;
+    background-color: #ffffff;
+
+    padding: 25px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+}
+
+.card h3 {
+    color: #0f172a;
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.card p {
+    color: #475569;
+    margin-bottom: 18px;
+}
+
+.card a {
+    color: #2563eb;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.card a:hover {
+    color: #1d4ed8;
+}
+
+/* ===== VIDEO ===== */
+
+.video-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    border-radius: 12px;
+
+    background-color: #0f172a;
+
+    box-shadow:
+        0 5px 20px rgba(15, 23, 42, 0.15);
+}
+
+/* ===== FORMULÁRIO ===== */
+
+form {
+    width: 100%;
+    text-align: left;
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+
+    background-color: #ffffff;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* ===== ÁREA DE CONTATO ===== */
+
+.contact-info {
+    background-color: #ffffff;
+    padding: 25px;
 
     border: 1px solid #e2e8f0;
     border-radius: 12px;
@@ -181,50 +353,200 @@ nav {
     box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
 }
 
-.card h3 {
+.contact-info h3 {
     margin-bottom: 15px;
 }
 
-.card p {
+.contact-info p {
     color: #475569;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.card a {
-    color: #2563eb;
-    font-weight: bold;
-}
-
-
-/* RODAPÉ */
+/* ===== RODAPÉ ===== */
 
 footer {
     background-color: #0f172a;
-    color: white;
+    color: #ffffff;
+
     text-align: center;
+
     padding: 30px 15px;
+
+    margin-top: 30px;
 }
 
+footer p {
+    font-size: 14px;
+}
 
-/* TABLET E DESKTOP */
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 767px) {
+
+    nav {
+        padding: 18px 0;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .menu {
+        gap: 8px 14px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 60vh;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-content > p:not(.tagline) {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .destaques {
+        width: 90%;
+        padding: 50px 0;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .video-container {
+        width: 100%;
+    }
+
+    .video-container video {
+        border-radius: 8px;
+    }
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (min-width: 600px) and (max-width: 767px) {
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn {
+        width: auto;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ========================================
+   DESKTOP
+======================================== */
 
 @media (min-width: 768px) {
 
     nav {
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu {
+        width: auto;
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+
+    .menu a {
+        font-size: 15px;
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding: 80px 5%;
     }
 
     .hero h1 {
-        font-size: 60px;
+        font-size: 56px;
+    }
+
+    .hero-content > p:not(.tagline) {
+        font-size: 18px;
     }
 
     .hero-buttons {
         flex-direction: row;
         justify-content: center;
+        align-items: center;
+    }
+
+    .btn {
+        width: auto;
+    }
+
+    .destaques {
+        padding: 70px 0;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
     }
 
     .cards {
         grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .card {
+        padding: 30px;
+    }
+}
+
+/* ========================================
+   TELAS GRANDES
+======================================== */
+
+@media (min-width: 1200px) {
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .destaques {
+        padding: 80px 0;
     }
 }
